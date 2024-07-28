@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Trading Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@polkadot/api@10.0.1/dist/polkadot.api.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Dice Trading Game</h1>
+        <div id="game">
+            <p id="instructions">Maximize your expected profit over a series of trading rounds.</p>
+            
+            <!-- Wallet Section -->
+            <div id="wallet">
+                <label for="walletAddress">Polkadot Wallet Address:</label>
+                <input type="text" id="walletAddress" placeholder="Enter your Polkadot wallet address">
+                <button id="connectWalletBtn">Connect Wallet</button>
+                <p id="walletMessage"></p>
+            </div>
+            
+            <div id="diceContainer"></div>
+            <div id="quote">
+                <p>Market Maker Quote:</p>
+                <p>Bid: <span id="bidPrice"></span></p>
+                <p>Ask: <span id="askPrice"></span></p>
+            </div>
+            <div id="trade">
+                <label for="units">Units:</label>
+                <input type="number" id="units" min="1">
+                <button id="buyBtn">Buy</button>
+                <button id="sellBtn">Sell</button>
+            </div>
+            <p id="message"></p>
+            <p>Current Balance: <span id="balance">500</span></p>
+        </div>
+        <button id="nextRoundBtn">Next Round</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
